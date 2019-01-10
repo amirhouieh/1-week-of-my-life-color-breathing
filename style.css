@@ -1,0 +1,32 @@
+html, body { height: 100%}
+
+body {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-transform: capitalize;
+	font-family: 'adobe_caslon_probold';
+}
+
+#toolbox {
+	top: 20px; left: - 200px;
+	display: block;
+	float: right;
+}
+
+
+
+.test{
+/* 	border-radius: 50%; */
+	width: 300px;
+	height: 300px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+/*    opacity: 0.2; */
+    
+}
+

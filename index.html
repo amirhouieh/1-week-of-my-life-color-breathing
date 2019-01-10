@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title> flip </title>
+	<link rel="stylesheet" href="style2.css" type="text/css" media="screen" charset="utf-8" />
+
+	<script type="text/javascript" src="csi/jquery.min.js"></script>
+	<script type="text/javascript" src="csi/jquery-ui-effects.min.js"></script>
+	<script type="text/javascript">
+
+var hours = [ {color: 'yellow', rtm:2}, {color: 'yellow', rtm:2}, {color: 'gray', rtm:7 }, {color: 'gray', rtm: 7 }, {color: 'gray', rtm:7 }, {color: '#ee00ff', rtm:2 }, {color: 'gray', rtm:7 }, {color: 'gray', rtm:4 }, {color: 'gray', rtm:7 }, {color: 'yellow', rtm:2}, {color: '#ee00ff', rtm:2 }, {color: '#ee00ff', rtm:2 }, {color: 'red', rtm:5 }, {color: 'red', rtm:5 }, {color: '#ee00ff', rtm:2 }, {color: 'red', rtm:5 }, {color: 'red', rtm:3 }, {color: 'black', rtm:1 }, {color: 'black', rtm:1 }, {color: 'black', rtm:1 }, {color: 'black', rtm:1 }, {color: 'black', rtm:1 }, {color: 'black', rtm:1 }, {color: 'black', rtm:1 } ];
+
+var state = true;
+var i =0;
+var end = false;
+
+function update(h){
+			var rtm = hours[h].rtm;
+			var color = hours[h].color;
+
+			$('.main').animate( { backgroundColor: color }, rtm* 300)
+						.animate( { backgroundColor: 'black' }, rtm *300);
+			
+}
+
+function textUpdate(s,m,h){
+		$('#parag').write(h + ": " + m +  ": " + s ) ;
+}
+
+function initPage(){
+	
+	for (  var h =0; h<24; h++){
+		for (  var m=0; m<1; m++){
+			for ( var s=0; s<1; s++){
+				update(h);
+				console.log(h);
+
+    
+			}
+		}
+	}
+	
+	
+}
+    
+    
+
+		$( document ).ready( initPage );
+
+	</script>
+
+</head>
+
+<body>
+
+<div class="main"> </div>
+
+</body>
+
+</html>
